@@ -1,7 +1,6 @@
 =======
 # Kubernetes-AppD-battleground
-Appdynamics agent integration for applications deployed on Kubernetes
-Use the appropriate docker image containing a AppD python agent (e.g. rajatparida86/appdynpythonmonitor)
+Appdynamics agent integration for applications deployed on Kubernetes.
 
 ##Start up a Kubernetes multi node cluster from the coreos vagrant image from [here](https://coreos.com/kubernetes/docs/latest/kubernetes-on-vagrant.html)
 
