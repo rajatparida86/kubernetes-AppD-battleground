@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    name: monitor
+    app: appdynamics-machienagent
+    version: v1
+  name: appdynamics-machienagent
+spec:
+  template:
+    metadata:
+      name: appdynamics-machienagent
+      labels:
+        app: appdynamics-machienagent
+    spec:
+      containers:
+      - name: appdynamics-machienagent
+        image: rajatparida86/kubernetes-appdynmachineagent
+        command: ["/appdynamics-machine/startmachineagent.sh"]
