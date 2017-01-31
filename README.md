@@ -3,6 +3,17 @@
 Appdynamics agent integration for applications deployed on Kubernetes
 >>>>>>> d8744a559a1de2966282acd39e3dc407241da916
 <<<<<<< HEAD
+Use the appropriate docker image containing a AppD python agent (e.g. rajatparida86/appdynpythonmonitor)
+
+- Start up a Kubernetes multi node cluster from the coreos vagrant image from [here](https://coreos.com/kubernetes/docs/latest/kubernetes-on-vagrant.html)
+- Create pods for redis
+- Create service for redis
+- Create pods for web
+- Create service for web
+- Create daemonset for machine agent
+
+
+
 # kubernetes
 Tutorial to build and deploy a simple Python app in Kubernetes. The walkthrough is available [here](https://youtu.be/zeS6OyDoy78).
 
