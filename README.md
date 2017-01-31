@@ -1,3 +1,7 @@
+=======
+# kubernetes-AppD-battleground
+Appdynamics agent integration for applications deployed on Kubernetes
+>>>>>>> d8744a559a1de2966282acd39e3dc407241da916
 <<<<<<< HEAD
 # kubernetes
 Tutorial to build and deploy a simple Python app in Kubernetes. The walkthrough is available [here](https://youtu.be/zeS6OyDoy78).
@@ -13,7 +17,7 @@ docker push <DOCKER_HUB_USER>/web
 
 ## Launch the app with Docker Compose
 ```
-docker-compose up -d 
+docker-compose up -d
 ```
 
 ## Test the app
@@ -48,16 +52,3 @@ kubectl describe svc web
 kubectl get nodes
 curl <NODE_IP>:<NODEPORT>
 ```
-
-
-
-
-
-
-
-
-
-=======
-# kubernetes-AppD-battleground
-Appdynamics agent integration for applications deployed on Kubernetes
->>>>>>> d8744a559a1de2966282acd39e3dc407241da916
