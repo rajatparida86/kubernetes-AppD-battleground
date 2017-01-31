@@ -69,8 +69,12 @@ kubectl describe svc web
         Session Affinity:	None
         No events.
 ##Access the application:
-curl <node IP>:<service nodeport>
+```
+curl node IP:service nodeport
+```
 ##Example: (Based on above values)
+```
 curl 172.17.4.201:30239
+```
 
-##Check the controller to se the Application reporting and correlation between the python app agent and the machine agent
+##Check the controller to see the Application reporting and correlation between the python app agent and the machine agent
