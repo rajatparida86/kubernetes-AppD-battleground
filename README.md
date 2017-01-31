@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # kubernetes
 Tutorial to build and deploy a simple Python app in Kubernetes. The walkthrough is available [here](https://youtu.be/zeS6OyDoy78).
 
@@ -56,3 +57,7 @@ curl <NODE_IP>:<NODEPORT>
 
 
 
+=======
+# kubernetes-AppD-battleground
+Appdynamics agent integration for applications deployed on Kubernetes
+>>>>>>> d8744a559a1de2966282acd39e3dc407241da916
