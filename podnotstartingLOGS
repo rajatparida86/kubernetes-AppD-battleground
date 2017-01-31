@@ -1,0 +1,31 @@
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tejI2bTIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjQzZTljMzg5LWUzZDAtMTFlNi04YTgzLTA4MDAyNzc2ZDI5ZSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.JYXP8epYAdpD8u02U2VoAih-yLi85XP106UzhV6OQgEzL230ttgkLDg5XlHAWn-CXfaOp93ouYBXIB0Q3B85KGlA1nkaCZ4iev3kvCvil8hkgi4mxr9uftxFDp27dfLDUhTrB3FEA0bkmJZs22WYhoQByu-XIRf-FzYv8NVpjPjmytrz9XqUeL0UEm-2mRgTZJXypnnWNKvvUbnEVQWqD9Aew8zc0aW78ldk_KPziDE7bFWRCNhKMs0qAgsSOY_zD0tFRlvblM2GpTyD3uwhf6AJRvDVqRzjzuvOIE1GbYn2hnp8y2ic4jtWUXRQuFnMjlItaVLJP3-bD2htJw8y1g
+Unique Host ID should be: 172.17.4.201
+Hostname is web1
+Collecting flask
+  Downloading Flask-0.12-py2.py3-none-any.whl (82kB)
+Collecting itsdangerous>=0.21 (from flask)
+  Downloading itsdangerous-0.24.tar.gz (46kB)
+Collecting click>=2.0 (from flask)
+  Downloading click-6.7-py2.py3-none-any.whl (71kB)
+Collecting Werkzeug>=0.7 (from flask)
+  Downloading Werkzeug-0.11.15-py2.py3-none-any.whl (307kB)
+Collecting Jinja2>=2.4 (from flask)
+  Downloading Jinja2-2.9.4-py2.py3-none-any.whl (274kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.4->flask)
+  Downloading MarkupSafe-0.23.tar.gz
+Building wheels for collected packages: itsdangerous, MarkupSafe
+  Running setup.py bdist_wheel for itsdangerous: started
+  Running setup.py bdist_wheel for itsdangerous: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/fc/a8/66/24d655233c757e178d45dea2de22a04c6d92766abfb741129a
+  Running setup.py bdist_wheel for MarkupSafe: started
+  Running setup.py bdist_wheel for MarkupSafe: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/a3/fa/dc/0198eed9ad95489b8a4f45d14dd5d2aee3f8984e46862c5748
+Successfully built itsdangerous MarkupSafe
+Installing collected packages: itsdangerous, click, Werkzeug, MarkupSafe, Jinja2, flask
+Successfully installed Jinja2-2.9.4 MarkupSafe-0.23 Werkzeug-0.11.15 click-6.7 flask-0.12 itsdangerous-0.24
+
+Collecting appdynamics==4.2.11.0
+  Using cached appdynamics-4.2.11.0-py2.py3-none-any.whl
+Collecting appdynamics-bindeps-linux-x64==4.2.11.0; sys_platform == "linux2" and (platform_machine == "x86_64" or platform_machine == "AMD64") (from appdynamics==4.2.11.0)
+./startredistalker.sh: line 11:    36 Killed                  pip install -U appdynamics==4.2.11.0
+Collecting redis

@@ -1,0 +1,16 @@
+apiVersion: "v1"
+kind: Pod
+metadata:
+  name: web1
+  labels:
+    name: web1
+    app: demo
+spec:
+  containers:
+    - name: web1
+      image: rajatparida86/sample-redis-talker
+      command: ["/application/startredistalker.sh"]
+      ports:
+        - containerPort: 5000
+          name: http
+          protocol: TCP

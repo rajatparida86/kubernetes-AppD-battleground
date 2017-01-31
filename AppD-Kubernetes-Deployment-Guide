@@ -1,0 +1,11 @@
+############################################################
+# Host Appd monitored application on Kubernetes with Docker
+############################################################
+Use the appropriate docker image containing a AppD python agent (e.g. rajatparida86/appdynpythonmonitor)
+
+- Start up the cluster from the coreos vagrant image
+- Create pods for redis
+- Create service for redis
+- Create pods for web
+- Create service for web
+- Create daemonset for machine agent
