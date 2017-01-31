@@ -1,65 +1,76 @@
 =======
-# kubernetes-AppD-battleground
+# Kubernetes-AppD-battleground
 Appdynamics agent integration for applications deployed on Kubernetes
->>>>>>> d8744a559a1de2966282acd39e3dc407241da916
-<<<<<<< HEAD
 Use the appropriate docker image containing a AppD python agent (e.g. rajatparida86/appdynpythonmonitor)
 
-- Start up a Kubernetes multi node cluster from the coreos vagrant image from [here](https://coreos.com/kubernetes/docs/latest/kubernetes-on-vagrant.html)
-- Create pods for redis
-- Create service for redis
-- Create pods for web
-- Create service for web
-- Create daemonset for machine agent
+#Start up a Kubernetes multi node cluster from the coreos vagrant image from [here](https://coreos.com/kubernetes/docs/latest/kubernetes-on-vagrant.html)
 
-
-
-# kubernetes
-Tutorial to build and deploy a simple Python app in Kubernetes. The walkthrough is available [here](https://youtu.be/zeS6OyDoy78).
-
-Make sure that you have access to a Kubernetes cluster.
-
-## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
+#Build the application docker image with appropriate controller configuration from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
 cd Docker
-docker build . -t <DOCKER_HUB_USER>/web
-docker push <DOCKER_HUB_USER>/web
+docker build . -t <DOCKER_HUB_USER>/sample-redis-talker
+docker push <DOCKER_HUB_USER>/sample-redis-talker
 ```
 
-## Launch the app with Docker Compose
+#Build the machine agent docker image with appropriate controller configuration and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
-docker-compose up -d
-```
-
-## Test the app
-```
-curl localhost:3000
+cd k8-machineagent
+docker build . -t <DOCKER_HUB_USER>/kubernetes-appdynmachineagent
+docker push <DOCKER_HUB_USER>/kubernetes-appdynmachineagent
+cd ../
 ```
 
-## Deploy the app to Kubernetes
+#Create pod for redis
 ```
-cd ../Kubernetes
+cd Kubernetes
 kubectl create -f db-pod.yml
+```
+
+#Create service for redis
+```
 kubectl create -f db-svc.yml
+```
+
+#Create pod for web
+```
 kubectl create -f web-pod.yml
+```
+
+#Create service for web
+```
 kubectl create -f web-svc.yml
-kubectl create -f web-rc.yml
 ```
 
-## Check that the Pods and Services are created
+#Create daemonset for machine agent
 ```
-kubectl get pods
-kubectl get svc
-```
-
-## Get the NodePort for the web Service. Make a note of the port.
-```
-kubectl describe svc web
+kubectl create -f machineagentdaemonset.yml
 ```
 
-## Test the app by accessing the NodePort of one of the nodes.
-
-```
+#Put load on the redis based python application
 kubectl get nodes
-curl <NODE_IP>:<NODEPORT>
-```
+#Example:
+        NAME           STATUS                     AGE
+        172.17.4.101   Ready,SchedulingDisabled   3h
+        172.17.4.201   Ready                      3h
+        kubectl describe svc web
+
+kubectl describe svc web
+#Example:
+        Name:			web
+        Namespace:		default
+        Labels:			app=demo
+            name=web
+        Selector:		name=web
+        Type:			NodePort
+        IP:			10.3.0.176
+        Port:			<unset>	80/TCP
+        NodePort:		<unset>	30239/TCP
+        Endpoints:		10.2.71.10:5000
+        Session Affinity:	None
+        No events.
+#Access the application:
+curl <node IP>:<service nodeport>
+#Example: (Based on above values)
+curl 172.17.4.201:30239
+
+#Check the controller to se the Application reporting and correlation between the python app agent and the machine agent
