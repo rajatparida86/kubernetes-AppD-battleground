@@ -44,7 +44,7 @@ kubectl create -f web-svc.yml
 
 ##Create daemonset for machine agent
 ```
-###Edit the web-pod.yml file to add your own docker application image name (created above) under the 'image' key
+###Edit the machineagentdaemonset.yml file to add your own docker application image name (created above) under the 'image' key
 kubectl create -f machineagentdaemonset.yml
 ```
 
